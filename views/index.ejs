@@ -1,0 +1,63 @@
+<html>
+
+<head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="/stylesheets/styleCYK.css">
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+   <script src="/javascripts/plot2.js" type="text/javascript"></script> 
+</head>
+
+<body>
+   <div id="ui_design">
+      <div id="heading" class="row">
+         <h2>3AD Web Application</h2>
+      </div>
+      <div class="row">
+         <div id="columnForCheck">
+            <!-- replace the tracer block here -->
+            <div id="circle">
+               <canvas id="Canvas2"></canvas>
+               <!-- <script src=<%= js %>></script> -->
+               <!-- <script>test()</script> -->
+               <script>refresh(<%= totalSeats%>,<%= seatsOccupied%>,<%= violators%>);</script>
+               <p id='noti'>Location <%= loc %></p>
+            </div>
+         </div>
+         <div class="column">
+            <div class="topnav" id="myTopnav">
+               <div class="dropdown">
+                  <button class="dropbtn">Location
+                     <i class="fa fa-caret-down"></i>
+                  </button><br><br>
+                  <div class="dropdown-content">
+                     <!-- modify to test locations -->
+                     <a href="/cafe" id="cafeteria">Cafeteria</a>
+                     <a href="/" id="all">All</a>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+         <div id="count" class="row">
+            <!-- the data that is to be shown is to be modified bleow -->
+            <div id="total_seats" class="column">
+               <p id="rcorners1">Seats occupied<br><br>
+                  <lable id="dataVals"><%= seatsOccupied %></lable>
+                  <!-- <p id="dataValues"></p> -->
+               </p>
+            </div>
+            <div id="available_seats" class="column">
+               <p id="rcorners1">Available Seats<br><br>
+                  <lable id="dataVals2"><%= availableSeats %></lable>
+                  <!-- <p id="dataValues"><%= availableSeats %></p> -->
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+<!-- cyKlone -->
+
+</html>
