@@ -1,0 +1,4 @@
+{
+    // update the custom url for fetch and update
+    "databaseURL": "https://ad-webapp-ee28e.firebaseio.com/"
+}

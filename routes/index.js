@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var config = require('./../config.json');
 
 
 class users{
@@ -13,7 +14,8 @@ class users{
 // cloud RTDB
 var firebase = require("firebase");
 firebase.initializeApp({
-  databaseURL: "https://ad-webapp-ee28e.firebaseio.com/"
+  // databaseURL: "https://ad-webapp-ee28e.firebaseio.com/"
+  databaseURL: config.databaseURL
 });
 
 var dbRef = firebase.database().ref("users");

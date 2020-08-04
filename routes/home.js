@@ -104,14 +104,16 @@ var timee = curHour + ":" + curMinute + " " + curMeridiem ;
          }
       }
     })
+
+    cafeteria.availableSeats = cafeteria.totalSeats - cafeteria.occupiedSeats;
   res.render('home',{js:'/javascripts/plot.js',
   loc:'Cafeteria',
   seatsOccupied: cafeteria.occupiedSeats,
-  availableSeats: cafeteria.totalSeats,
+  availableSeats: cafeteria.availableSeats,
   totalSeats:cafeteria.totalSeats,
   violators:cafeteria.violators,
   dater: today,
-timee:timee 
+  timee:timee 
 
 });
 })
