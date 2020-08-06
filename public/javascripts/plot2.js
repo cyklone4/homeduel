@@ -2,7 +2,7 @@ function refresh(totalSeats,totalCount,totalViolators) {
     var totalseats = totalSeats;
     var totalcount =  totalCount;
     //initializing big cirlce
-    var canvas = document.getElementById("Canvas2");
+    var canvas = document.getElementById("canvas2");
     var ctx = canvas.getContext("2d");
     ctx.globalAlpha = 0.8;
     var containerR = 200;
@@ -29,6 +29,7 @@ function refresh(totalSeats,totalCount,totalViolators) {
           ctx.fillStyle = "red";
           ctx.fill();
           ctx.closePath(); 
+          console.log("i've plotted the violators")
     }
        var Freeseats = totalSeats - totalCount;
        if(Freeseats==5)
