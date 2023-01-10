@@ -11,7 +11,7 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "firebase": "^7.16.1",
-    "firebase-admin": "^9.0.0",
+    "firebase-admin": "^11.4.1",
     "firebase-functions": "^3.8.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
